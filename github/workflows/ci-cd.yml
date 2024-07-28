@@ -3,22 +3,16 @@ name: CI/CD Workflow
 on:
   push:
     branches:
-      - main  # Trigger the workflow on pushes to the main branch
+      - main 
 
 jobs:
-  build:  # Your existing build job
+  build:  
     runs-on: ubuntu-latest
-    steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      # Your existing steps for the build job go here
-
-  print_txt:  # New job to print the text file
-    runs-on: ubuntu-latest
+    
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
 
-      - name: Print Text File
+      - name: Print Hello World
         run: 
           cat hello world.txt
